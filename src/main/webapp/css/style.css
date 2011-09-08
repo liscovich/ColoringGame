@@ -1,0 +1,149 @@
+html {
+  height: 100%;
+  margin-bottom: 1px;
+}
+
+body {
+  font-family: Helvetica, sans-serif;
+  font-size: 12px;
+}
+
+#header {
+  padding: 15px 25px;
+  border-bottom: solid 2px black;
+  background: #222;
+  text-shadow: 0 0 2px black;
+  font-size: 14px;
+  color: white;
+}
+
+#header h1 {
+  text-transform: uppercase;
+}
+
+#header a {
+  text-decoration: none;
+  color: white;
+}
+
+#signin_info {
+  position: absolute; top: 15px; right: 25px;
+}
+
+.rhs {
+  position: absolute; top: 0; right: 25px;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+table th {
+  text-align: left;
+  font-weight: bold;
+  color: #333;
+}
+
+table th, table td {
+  padding: 5px;
+  border: solid 2px #999;
+}
+
+
+.hit_list tr:hover td {
+  background: #FFA;
+  cursor: pointer;
+}
+
+.worker_list td.active {
+  background: #AFA;
+}
+
+.hit_realtime p {
+  margin-bottom: 25px;
+  text-align: right;
+  font-size: 24px;
+  display: none;
+}
+
+.hit_detail {
+  margin: 25px;
+  width: 580px;
+}
+.hit_detail .error {
+  width: 560px;
+  padding: 5px 10px;
+  margin-bottom: 20px;
+  line-height: 20px;
+  border: solid 2px red;
+  background: #FCC;
+  color: red;
+}
+.hit_detail .head,
+.hit_detail .body,
+.hit_detail .foot {
+  width: 560px;
+  padding: 10px;
+  background: #EEE;
+}
+.hit_detail .head {
+  border: solid 2px #999;
+  border-bottom: none;
+}
+.hit_detail .body {
+  border-top: solid 1px #CCC;
+  border-left: solid 2px #999;
+  border-right: solid 2px #999;
+}
+.hit_detail .foot {
+  border: solid 2px #999;
+  border-top: solid 1px #CCC;
+}
+.hit_detail .controls {
+  border-top: solid 2px #999;
+  background: white;
+}
+.hit_detail label,
+.hit_detail .label {
+  width: 220px;
+  padding-top: 5px;
+  display: inline-block;
+  vertical-align: top;
+  font-weight: bold;
+  font-size: 14px;
+  color: #222;
+}
+.hit_detail .value {
+  width: 340px;
+  display: inline-block;
+  vertical-align: top;
+  font-size: 14px;
+}
+.hit_detail .text {
+  line-height: 1.5em;
+}
+.hit_detail .full_width {
+  width: 334px;
+}
+.hit_detail time.value,
+.hit_detail span.value {
+  padding-top: 5px;
+  padding-bottom: 3px;
+}
+.hit_detail input[type=text],
+.hit_detail textarea {
+  /*border: solid 2px #999;*/
+  background: white;
+  font-size: 14px;
+}
+.hit_detail input[type=number] {
+  background: white;
+  font-size: 14px;
+}
+.hit_detail input[type=text]:focus,
+.hit_detail textarea:focus {
+  /*border-color: #0AF;*/
+}
+.hit_detail input[type=button] {
+  margin: 10px 0;
+}

@@ -1,0 +1,90 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+	<title>Coloring Game - Client</title>
+	<link rel="StyleSheet" href="css/generous.css?t=<%= new java.util.Date().getTime() %>"/>
+	<link rel="StyleSheet" href="css/slider.css"/>
+	<script type="text/javascript" src="js/raphael-min.js"></script>
+	<script type="text/javascript" src="js/raphael.blur.js"></script>
+	<script type="text/javascript" src="js/jquery-1.5.2.min.js"></script>
+	<script type="text/javascript" src="js/util.js"></script>
+	<script type="text/javascript" src="js/constants.js"></script>
+	<script type="text/javascript" src="js/arc.js"></script>
+	<script type="text/javascript" src="js/ar_client.js?t=<%= new java.util.Date().getTime() %>"></script>
+	<script type="text/javascript" src="js/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="js/modernizr-1.7.min.js"></script>
+	<script type="text/javascript" src="http://www.google.com/jsapi"></script>
+	<script type="text/javascript" src="js/init_client.js?t=<%= new java.util.Date().getTime() %>"></script>
+</head>
+<body>
+<div id="statusDiv"></div>
+<div style="width:100%;position:absolute;top:10px;left:0;z-index:1000;">
+	<div style="width:398px;height:200px;display:table;margin:0 auto;">
+		<div class="container">
+			<div><div class="titlel"></div><div class="titler"></div><div id="title" class="title"></div></div>
+			<table cellpadding="0" cellspacing="0" border="0" width="100%" style="background:#f5f5f5;"><tr>
+				<td class="bordersidel"></td>
+				<td><div id="message"></div></td>
+				<td class="bordersider"></td>
+			</tr></table>
+			<div><div class="navil"></div><div class="navir"></div><div id="navi"><div class='navi'></div></div></div>
+		</div>
+	</div>
+</div>
+<div style="width:100%;position:absolute;top:200px;left:0;">
+	<div id="draw"></div>
+</div>
+<div id='sm_end' class='slotMachine inactive' style='display:none;'>
+	<div><div class="titlel"></div><div class="titler"></div><div class="title"></div></div>
+	<!--table cellpadding="0" cellspacing="0" border="0" width="100%" style="background:#f5f5f5;"><tr>
+		 td class="bordersidel"></td>
+		<td style='height: 85px;'>
+		 
+			<div class='scale'>
+				<div id='header1' class='header'>Another round?</div>
+				<div class='middle' id='middle1'>
+					<div class='scaleOuter'>
+						<div class='scaleInner'>
+							<div class='scaleYes'></div>
+							<div class='scaleNo'></div>
+							<div class='thresholdChance'></div>
+							<div class='realChance'></div>
+							<div class='curly' id='curlyYes'>
+								<div class='left'></div>
+								<div class='right'></div>
+								<div class='center'></div>
+								<div class='verticalBar'><span class='bar'></span></div>
+							</div>
+							<div class='curly' id='curlyNo'>
+								<div class='left'></div>
+								<div class='right'></div>
+								<div class='center'></div>
+								<div class='verticalBar'><span class='bar'></span></div>
+							</div>
+							<div class='yes'>Yes</div>
+							<div class='no'>No</div>
+						</div>
+						<div class='upper'>999</div>
+						<div class='lower'>000</div>
+					</div>
+				</div>
+			</div>
+			<div class='wheel'>
+		
+				<div id='header2' class='header'>Wheel of Fortune</div>
+				<div class='middle' id='middle2'>
+					<div class='number'>
+						<span id='slot1'>0</span>
+						<span id='slot2'>0</span>
+						<span id='slot3'>0</span>
+					</div>
+				</div>
+				
+			</div>
+		</td>
+		<td class="bordersider"></td>
+	</tr></table-->
+	<div><div class="navil"></div><div class="navir"></div><div class='navi'></div></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,737 @@
+/* 
+    Document   : generous
+    Created on : Mar 9, 2010, 4:00:01 PM
+    Author     : mcknight, bangnk
+    Description:
+        Purpose of the stylesheet follows.
+*/
+body {
+	font-family: Verdana, arial, helvetica, sans-serif;
+	font-size: 12px;
+	color: #444444;
+	line-height: 17px;
+	margin: 0;
+	padding: 0;
+}
+
+p {
+	margin: 0;
+	padding: 2px 0;
+}
+
+button {
+	margin: 0;
+	line-height:17px;
+}
+.nodeDiv {
+	position: absolute;
+	font-size: 10pt;
+	background: url('../images/rings.png') no-repeat;
+	text-align: center;
+	line-height: 43px;
+	/*-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border-radius: 10px;*/
+}
+
+.infoTable {
+	border-collapse: collapse;
+	border: 1px solid black;
+	clear: left;
+}
+
+.infoTable td {
+	padding: 2px;
+	padding-left: 2px;
+}
+
+.infoTable,.infoTable input,.infoTable select {
+	font-size: 8pt;
+}
+
+.infoTable tr:first-child {
+	background-color: #f5f8fa;
+	font-weight: bold;
+	text-align: center;
+}
+
+.blueNode {
+	background-position: 0 -45px;
+}
+
+.orangeNode {
+	background-position: 0 -90px;
+}
+
+.grayNode {
+	background-position: 0 0;
+}
+
+.orange {
+	color: #E36E00;
+	font-weight: bold;
+}
+
+.blue {
+	color: #568CDC;
+	font-weight: bold;
+}
+
+.new_connections {
+	font-weight: bold;
+	color: #7FC172;
+}
+
+.container {
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.titlel {
+	background: url("../images/border.png") 0 0 transparent;
+	height: 33px;
+	width: 25px;
+	float: left;
+}
+
+.titler {
+	background: url("../images/border.png") right 0 transparent;
+	height: 33px;
+	width: 25px;
+	float: right;
+}
+
+.title {
+	background: url("../images/border_side_v.png") repeat-x 0 0 transparent;
+	height: 23px;
+	font-size: 18px;
+	line-height: 18px;
+	text-align: center;
+	font-weight: bold;
+	padding: 10px 0 0;
+	margin: 0 25px;
+}
+.titlelessl {
+	background: url("../images/border.png") 0 0 transparent;
+	height: 23px;
+	width: 25px;
+	float: left;
+}
+
+.titlelessr {
+	background: url("../images/border.png") right 0 transparent;
+	height: 23px;
+	width: 25px;
+	float: right;
+}
+
+.titleless {
+	background: url("../images/border_side_v.png") repeat-x 0 0 transparent;
+	height: 13px;
+	font-size: 18px;
+	text-align: center;
+	font-weight: bold;
+	padding: 10px 0 0;
+	margin: 0 25px;
+}
+.bordersidel {
+	background: url("../images/border_side.png") repeat-y 0 0 transparent;
+	width: 15px;
+	height: 100%;
+	display: table-cell;
+}
+
+.bordersider {
+	background: url("../images/border_side.png") repeat-y right 0
+		transparent;
+	width: 15px;
+	height: 100%;
+	display: table-cell;
+}
+
+.borderside {
+	display: table;
+	width: 100%;
+}
+
+#statusDiv {
+	font-weight: bold;
+	float: left;
+	width: 300px;
+}
+
+#message {
+	padding: 10px 0 0;
+	background: #F5F5F5;
+	border: 0px;
+}
+
+#draw {
+	margin: 0 auto;
+	min-width: 400px;
+	clear: both;
+}
+
+.navil {
+	background: url("../images/border.png") 0 bottom transparent;
+	height: 43px;
+	width: 25px;
+	float: left;
+}
+
+.navir {
+	background: url("../images/border.png") right bottom transparent;
+	height: 43px;
+	width: 25px;
+	float: right;
+}
+
+.navi {
+	padding: 5px 0 10px;
+	background: url("../images/border_side_v.png") repeat-x 0 bottom
+		transparent;
+	height: 28px;
+	margin: 0 25px;
+}
+
+.navi #left {
+	float: left;
+	background: url("../images/arrow.png") repeat-y 5px -26px transparent;
+	width: 24px;
+	height: 27px;
+	white-space: nowrap;
+	cursor: pointer;
+}
+.navi #right {
+	float: right;
+	padding-right: 30px;
+	height: 27px;
+	white-space: nowrap;
+	background: url("../images/arrow.png") repeat-y right 6px transparent;
+	cursor: pointer;
+}
+
+.navi #left:hover,.navi #right:hover {
+	text-decoration: underline;
+}
+
+.clear {
+	clear: both;
+}
+
+.begin {
+	color: #999999;
+	float: right;
+	font-size: 10px;
+	font-weight: bold;
+	line-height: 27px;
+}
+
+.steps {
+	color: #999999;
+	font-size: 10px;
+	line-height: 27px;
+	text-align: center;
+	width: 30px;
+	margin: 0 160px;
+	position: absolute;
+}
+
+.waiting {
+	padding-top: 100px;
+	position: absolute;
+	text-align: center;
+	top: 445px;
+	width: 100%;
+	background: url("../images/waiting.gif") no-repeat center 50px
+		transparent;
+	left: 0;
+}
+
+.fb_left {
+	height: 50px;
+	width: 260px;
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.fb_right {
+	display: table-cell;
+	vertical-align: middle;
+	width: 400px;
+	height: 45px;
+	padding: 5px 0 0 0;
+}
+
+.ui-slider {
+	margin: 0 20px;
+}
+
+.leftSliderValue {
+	float: left;
+}
+
+.rightSliderValue {
+	float: right;
+}
+
+.welcome {
+	background: url("../images/ring7.png") no-repeat scroll center 0
+		transparent;
+	height: 255px;
+	left: 0;
+	padding-top: 155px;
+	position: absolute;
+	text-align: center;
+	top: 180px;
+	width: 100%;
+	z-index: -1;
+}
+
+.welcome1 {
+	background: url("../images/ring7_1.png") no-repeat scroll center 0
+		transparent;
+	height: 255px;
+	left: 0;
+	padding-top: 155px;
+	position: absolute;
+	text-align: center;
+	top: 180px;
+	width: 100%;
+	z-index: -1;
+}
+
+.welcome2 {
+	background: url("../images/ring7_2.png") no-repeat scroll center 0
+		transparent;
+	height: 255px;
+	left: 0;
+	padding-top: 155px;
+	position: absolute;
+	text-align: center;
+	top: 180px;
+	width: 100%;
+	z-index: -1;
+}
+
+.robot_hi {
+	text-align: center;
+	padding-top: 200px;
+	width: 100%;
+	width: 500px;
+	margin: 0 auto;
+}
+
+.robot_name {
+	margin: 0 auto;
+	text-align: center;
+	width: 500px;
+}
+.robot_contest {
+	 background: url("../images/robo_side_small.jpg") no-repeat scroll center 15px transparent;
+	height: 284px;
+	margin: 300px auto 0;
+	text-align: center;
+	width: 500px;
+}
+.bubblel {
+   background: url("../images/bubble7.png") repeat scroll 0 bottom transparent;
+    float: left;
+    height: 61px;
+    width: 70px;
+}
+
+.bubbler {
+	background: url("../images/border.png") repeat scroll right bottom transparent;
+    float: right;
+    height: 26px;
+    width: 25px;
+}
+
+.bubble {
+   background: url("../images/bubble7.png") repeat-x scroll -70px bottom transparent;
+    height: 61px;
+    margin: 0 25px 0 70px;
+    padding: 0 0;
+}
+
+.enlighted {
+	margin-left: 323px;
+    width: 350px;
+}
+
+#question_content {
+	background: #F5F5F5;
+	margin-top: -10px;
+}
+.question {
+	height: 125px;
+    margin-left: 228px;
+    position: absolute;
+    width: 315px;
+}
+.question.alter {
+    margin-left: 242px;
+    top: 46px;
+}
+.orangeBox img, .blueBox img {
+	margin-left: -6px;
+	margin-top: -20px;
+	width: 89px;
+} 
+.robotPoint {
+	width:300px;
+	height:400px;
+	position: absolute;
+	top: 90px;
+}
+.orangeBox, .blueBox {
+	position: absolute;
+	width:150px;
+	right:0;
+	cursor:pointer;
+}
+.eli_draw {
+	position: absolute;
+	z-index: 1;
+}
+.light {
+	position:absolute;
+	left:131px;
+	top:23px;
+}
+.answer {
+	left: 222px;
+	padding-left: 18px;
+	position: absolute;
+	text-align: center;
+	top: 120px;
+}
+.answer .bordersidel {
+   background: url("../images/bubble6.png") repeat scroll 0 center transparent;
+    float: left;
+    height: 51px;
+    width: 66px;
+}
+
+.answer .bordersider {
+	background: url("../images/bubble6.png") repeat scroll right center transparent;
+    float: right;
+    height: 51px;
+    width: 25px;
+}
+
+.answer .bordersidec {
+   background: url("../images/bubble6.png") repeat-x scroll -70px center transparent;
+    height: 51px;
+    padding: 0 0;
+}
+#answer_content {
+	background: #F5F5F5;
+	margin: 0 15px 5px;
+}
+.light img {
+	width:89px;
+}
+#eli_navi {
+	width:800px;
+	height: 80px;
+	position:absolute;
+	top: 460px;
+	left:6px;
+	z-index: 2;
+}
+#eli_navi .cell {
+	border-radius: 10px;
+	-moz-border-radius: 10px;
+	float:left;
+	margin-right:11px;
+	width:67px;
+	height:80px;
+	border: 1px solid #cccccc;
+	background-image: url("../images/eli.png");
+	background-repeat: no-repeat;
+	background-position: 160px 0;
+}
+#eli_navi .outerCell {
+	float:left;
+	font-size:10px;
+	text-align:center;
+}
+#eli_navi .outerCell .caption{
+	margin-right:11px;
+	line-height:17px;
+}
+#eli_navi .back {
+	width:26px;
+	height:82px;
+	float:left;
+	margin: 17px 11px 0 0;
+	background: url("../images/back.png") no-repeat scroll -26px 0 transparent;
+	cursor:pointer;
+}
+#eli_navi .back:hover {
+	background: url("../images/back.png") no-repeat scroll 0 0 transparent;
+}
+#eli_navi .next {
+	width:26px;
+	height:82px;
+	float:left;
+	margin-top: 17px;
+	background: url("../images/next.png") no-repeat scroll 0 0 transparent;
+}
+#eli_navi .next:hover {
+	background: url("../images/next.png") no-repeat scroll -26px 0 transparent;
+}
+#eli_navi .next.blink {
+	background: url("../images/next.gif") no-repeat scroll 0 0 transparent;
+}
+#eli_navi .next.blink:hover {
+	background: url("../images/next.png") no-repeat scroll -26px 0 transparent;
+}
+#eli_navi.step1 #cell1, #eli_navi.step2 #cell2, #eli_navi.step3 #cell3, #eli_navi.step4 #cell4, #eli_navi.step5 #cell5, #eli_navi.step6 #cell6, #eli_navi.step7 #cell7, #eli_navi.step8 #cell8, #eli_navi.step9 #cell9 {
+	border: 1px solid #555555;
+}
+.myNameRobo {
+	margin: 10px 0 0 300px;
+	width: 300px;
+}
+.iamready {
+	margin:  10px 0 0 451px;
+	width: 189px;
+}
+
+.command {
+	width:60px;
+	float:left;
+}
+#sm_end {
+	width:487px;
+	margin:450px auto 0;
+}
+.slotMachine .number {
+left: 7px;
+position: absolute;
+top: 35px;
+}
+#slot1, #slot2, #slot3 {
+	background:#ffffff;
+	border: 1px solid #909090;
+	color: #909090;
+	font-size: 17pt;
+	font-weight: bold;
+	margin: 0 3px;
+	padding: 22px 22px;
+	-moz-border-radius: 6px;
+	-webkit-border-radius: 6px;
+	border-radius: 6px;
+}
+.slotMachine.active #slot1, .slotMachine.active #slot2, .slotMachine.active #slot3 {
+	color:black;
+}
+.slotMachine {
+	position:relative;
+}
+.slotMachine #header1 {
+	font-size:12pt;
+	height: 30px;
+	line-height:30px;
+	width:221px;
+	margin:0 auto;
+	-moz-border-radius: 10px 10px 0 0;
+	-webkit-border-radius: 10px 10px 0 0;
+	border-radius: 10px 10px 0 0;
+	border:1px solid #909090;
+	border-width:1px 1px 0 1px;
+	background-color:#ffffff;
+	color:#444444;
+	padding: 0 0 0 15px;
+}
+.slotMachine #header2 {
+	text-align: center;
+	font-size:12pt;
+	height: 30px;
+	line-height:30px;
+	width:226px;
+	margin:0 auto;
+	-moz-border-radius: 10px 10px 0 0;
+	-webkit-border-radius: 10px 10px 0 0;
+	border-radius: 10px 10px 0 0;
+	background-color:transparent;
+	color:#444444;
+}
+.slotMachine #middle1 {
+	border:1px solid #909090;
+	border-width:0 1px 1px 1px;
+	height: 95px;
+	margin:0 auto;
+	position:relative;
+	background-color:#ffffff;
+	-moz-border-radius: 0 0 11px 11px;
+	-webkit-border-radius: 0 0 11px 11px;
+	border-radius: 0 0 11px 11px;
+	width:236px;
+}
+.slotMachine #middle2 {
+	height: 110px;
+	margin:0 auto;
+	position:relative;
+	background-color:transparent;
+	-moz-border-radius: 0 0 11px 11px;
+	-webkit-border-radius: 0 0 11px 11px;
+	border-radius: 0 0 11px 11px;
+}
+.slotMachine .scale {
+	position:absolute;
+	left:0;
+	padding: 14px;
+	top:0;
+}
+.slotMachine .wheel {
+	position:absolute;
+	right:0;
+	padding: 14px 8px 14px 0;
+	top:0;
+}
+.slotMachine .scaleOuter {
+position: relative;
+}
+.slotMachine .scaleInner {
+position: relative;
+margin-left:-7px;
+}
+.slotMachine.inactive .realChance {
+	display:none;
+}
+.slotMachine .scaleYes, .slotMachine .scaleNo {
+display: block;
+height: 5px;
+margin-left: 43px;
+position: absolute;
+top: 52px;
+}
+.slotMachine .scaleYes {
+	border:1px solid white;
+	border-width: 0 0 0 2px;
+}
+.slotMachine .scaleYes {
+	border:1px solid white;
+	border-width: 0 1px 0 0;
+}
+.slotMachine .scaleYes, .slotMachine .scaleNo {
+background: #909090;
+}
+.slotMachine.active .scaleYes.occur, .slotMachine.active .scaleNo.occur {
+background: #000000;
+}
+.slotMachine .yes, .slotMachine .no {
+color: #7f7f7f;
+font-size: 12pt;
+}
+.slotMachine.active .yes.occur, .slotMachine.active .no.occur {
+color: #000000;
+font-weight:bold;
+}
+.slotMachine #curlyYes, .slotMachine #curlyNo, .slotMachine #curlyYes, .slotMachine #curlyNo {
+opacity:.5;
+}
+.slotMachine.active #curlyYes.occur, .slotMachine.active #curlyNo.occur {
+opacity:1;
+}
+.slotMachine .yes {
+position: absolute;
+font-size: 10pt;
+top: 70px;
+margin-left: 28px;
+text-align:center;
+width:30px;
+}
+.slotMachine .realChance {
+background: url("../images/arrow2.png") no-repeat scroll center bottom transparent;
+font-size: 8pt;
+height: 46px;
+margin-left: 29px;
+position: absolute;
+text-align: center;
+top: 4px;
+width: 30px;
+font-weight:bold;
+}
+.slotMachine .no {
+top: 70px;
+position: absolute;
+font-size: 10pt;
+margin-left: 28px;
+text-align:center;
+width:30px;
+}
+.slotMachine .curly {
+top: 58px;
+height:10px;
+position: absolute;
+margin-left: 43px;
+}
+.slotMachine .curly .verticalBar {
+display:none;
+text-align:center;
+line-height: 10px;
+}
+.slotMachine .curly .verticalBar .bar {
+border-color: black;
+border-style: solid;
+border-width: 0 0 0 1px;
+display: block;
+height: 10px;
+margin: 0 auto;
+width: 1px;
+}
+.slotMachine .curly.occur .verticalBar .bar {
+border-width: 0 0 0 2px;
+width: 2px;
+}
+.slotMachine .curly.vertical .verticalBar {
+display:inherit;
+}
+.slotMachine .curly.vertical .left, .slotMachine .curly.vertical .right, .slotMachine .curly.vertical .center {
+display:none;
+}
+.slotMachine .curly .left {
+	background: url("../images/curly.png") no-repeat scroll left center transparent;
+	width:5px;
+	height:10px;
+	float:left;
+}
+.slotMachine .curly .right {
+	float:right;
+	height:10px;
+	width:5px;
+	background: url("../images/curly.png") no-repeat scroll right center transparent;
+}
+.slotMachine .curly .center {
+	height:10px;
+	background: url("../images/curly.png") no-repeat scroll center center transparent;
+	margin:0 5px;
+}
+.slotMachine .thresholdChance {
+font-size: 8pt;
+margin-left: 28px;
+position: absolute;
+top: 30px;
+color: #7f7f7f;
+width:30px;
+text-align:center;
+}
+.slotMachine .upper {
+position: absolute;
+font-size: 8pt;
+right: 7px;
+top: 45px;
+color: #7f7f7f;
+}
+.slotMachine .lower {
+color: #7f7f7f;
+top: 45px;
+left: 7px;
+position: absolute;
+font-size: 8pt;
+}

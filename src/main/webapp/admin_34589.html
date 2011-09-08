@@ -1,0 +1,113 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<title>PGG Admin Panel</title>
+	<link rel="StyleSheet" href="css/generous.css"/>
+	<script type="text/javascript" src="js/raphael-min.js"></script>
+	<script type="text/javascript" src="js/jquery-1.5.2.min.js"></script>
+	<script type="text/javascript" src="js/util.js"></script>
+	<script type="text/javascript" src="js/constants.js"></script>
+	<script type="text/javascript" src="js/arc.js"></script>
+	<script type="text/javascript" src="js/plot.js?t=<%= new java.util.Date().getTime() %>"></script>
+	<script type="text/javascript" src="js/server.js?t=<%= new java.util.Date().getTime() %>"></script>
+</head>
+<body style='padding:5px;'>
+<table id="gameTable" class="infoTable">
+	<tr height='60'>
+		<td>ID</td>
+		<td width='150' style='width:150px;'>Status</td>
+		<td>Human Players</td>
+		<td>AI Players</td>
+		<td>Cost of Coop</td>
+		<td>Payoff</td>
+		<td>Seed money</td>
+		<td>Exchange rate</td>
+		<td>Rounds A</td>
+		<td>Rounds B</td>
+		<td>Prob of end (0-1)</td>
+		<td>Elicitation</td>
+		<td>Ordering A</td>
+		<td>Ordering B</td>
+		<td>Global timeout</td>
+		<td>Ind timeout</td>
+		<td>Idle timeout</td>
+		<td width='130'><img id="working" alt="Working..." src="images/0_3d.png" width="35" height="35"/></td>
+	</tr>
+	<tr>
+		<td><input id="sid" style="width:8em;" value="" onfocus='this.value = generateGameID();' onblur=''/></td>
+		<td width='150' style='width:150px;'>&nbsp;</td>
+		<td><input id="hu" style="width:3em;" value="0"/></td>
+		<td><input id="n" style="width:3em;" value="10"/></td>
+		<td><input id="coc" style="width:3em;" value="10"/></td>
+		<td><input id="po" style="width:3em;" value="6"/></td>
+		<td><input id="sm" style="width:3em;" value="100"/></td>
+		<td><input id="er" style="width:3em;" value="0.001"/></td>
+		<td><input id="rA" style="width:3em;" value="1" onchange="javascript:switchToManually()"/></td>
+		<td><input id="rB" style="width:3em;" value="1" onchange="javascript:switchToManually()"/></td>
+		<td nowrap='nowrap'><input id="poe" style="width:3em;" value="0.1"/> <input id="fixed" type="hidden" value="true"/> <input type='button' onClick='javascript:genNumberOfRounds();' value='Gen'></td>
+		<td><select id="eli"><option>Yes</option><option>No</option></select></td>
+		<td><select id="orderA"><option value="Max">Max</option><option value="Min">Min</option><option value="Rnd">Rnd</option></select></td>
+		<td><select id="orderB"><option value="Min">Min</option><option value="Max">Max</option><option value="Rnd">Rnd</option></select></td>
+		<td><input id="gto" style="width:3em;" value="480"/></td>
+		<td><input id="pto" style="width:3em;" value="400"/></td>
+		<td><input id="ito" style="width:3em;" value="45"/></td>
+		<td><input id="prepareServer" type="button" value="New Game"/></td>
+	</tr>
+</table>
+
+<div style="width: 100%; padding-top: 10px;">
+	<div id="draw" style="float: left;min-width: 400px;"></div>
+	<div id="watch" style="visibility: hidden;">
+		<table id="clientTable" class="infoTable">
+			<tr>
+				<td>ID</td>
+				<td>Name</td>
+				<td>Status</td>
+				<td>Bonus</td>
+				<td>First move</td>
+				<td>Rule</td>
+				<td>Current Choice</td>
+				<td>Last Choice</td>
+				<td>Neighbor ID</td>
+				<td>URL</td>
+				<td>Turker Id</td>
+				<td>Tutorial Time</td>
+				<td>Elicitation Time</td>
+				<td>Last Ping</td>
+				<td>Idle Time</td>
+			</tr>
+		</table>
+		
+		<table border="0" cellspacing="0" cellpadding="0" width="100%">
+			<tr valign="top">
+				<td>
+					<div style='font-size:16px;font-weight:bold;margin:10px 0;color:#444444;' id='logUrl'>Raw log</div>
+					<pre id="queue" style="clear:left;margin:0;height: 500px; width:1000px; overflow: auto;border:1px solid #444444;"></pre>
+				</td>
+			</tr>
+			<tr valign="top">
+				<td>
+					<div style='font-size:16px;font-weight:bold;margin:10px 0;color:#444444;' id='reportUrl'>Reports</div>
+					<pre id="report" style="margin:0;height: 500px; width:1000px; overflow: auto;border:1px solid #444444;"></pre>
+				</td>
+			</tr>
+			<tr valign="top">
+				<td>
+					<h3>Paste Turker IDs Here:</h3>
+					<textarea rows="10" cols="20" id="turkIds" style="clear:left;"></textarea>
+				</td>
+			</tr>
+			<tr valign="top">
+				<td>
+					<h3>Memory status</h3>
+					<div>Max memory: <span id='maxMemory'></span> MB</div>
+					<div>Total memory: <span id='totalMemory'></span> MB</div>
+					<div>Used memory: <span id='usedMemory'></span> MB</div>
+					<div>Free memory: <span id='freeMemory'></span> MB</div>
+				</td>
+			</tr>
+		</table>
+	</div>
+</div>
+</body>
+</html>
